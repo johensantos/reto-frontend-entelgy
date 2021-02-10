@@ -1,0 +1,88 @@
+/*
+*Remove Default Styles
+*/
+
+html {
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+/*
+*Variables
+*/
+:root {
+    --main-primary-color: #673ab7;
+}
+
+/*
+*Header
+*/
+
+.header {
+    height: 56px;
+    background-color: var(--main-primary-color);
+    box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%), 0 3px 1px -2px rgb(0 0 0 / 12%), 0 1px 5px 0 rgb(0 0 0 / 20%);
+    text-align: center;
+}
+
+.header .header__logo {
+    margin-top: 10px;
+    color: white;
+    display: inline-block;
+    font-size: 2.1rem;
+}
+
+.main-content {
+    max-width: 960px;
+
+    min-height: 900px;
+
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: yellow;
+}
+
+
+/*
+*GRILLA
+*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.row > * {
+    flex-shrink: 0;
+    width: 100%;
+    max-width: 100%;
+}
+.column {
+    flex: 1 0 0%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.row-columns-4 > * {
+    flex: 0 0 auto;
+    width: 25%;
+}
