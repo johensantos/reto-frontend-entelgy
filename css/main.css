@@ -82,6 +82,13 @@ img {
     width: 25%;
 }
 
+@media (max-width: 575px) {
+    .row-columns-4 > .column {
+        flex: 0 0 auto;
+        width: 100%;
+    }
+}
+
 .column {
     flex: 1 0 0%;
     padding-left: 10px;
@@ -123,6 +130,7 @@ img {
     text-align: center;
 
 }
+
 /*
 *Others
 */
