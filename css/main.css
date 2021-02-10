@@ -61,10 +61,8 @@ img {
     margin-right: auto;
     margin-left: auto;
 }
-
-
 /*
-*GRILLA
+*GRID SYSTEM
 */
 .row {
     display: flex;
@@ -98,7 +96,7 @@ img {
 }
 
 /*
-*modal
+*SIMPLE MODAL
 */
 .simple-modal {
     background-color: rgba(0, 0, 0, 0.3);
@@ -130,9 +128,18 @@ img {
     text-align: center;
 
 }
+/*FOOTER*/
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
 
 /*
-*Others
+*OTHERS
 */
 .link {
     text-decoration: none;
@@ -165,12 +172,4 @@ img {
     text-align: center;
 }
 
-/*Footer*/
-.footer {
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
+

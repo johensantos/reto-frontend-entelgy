@@ -5,7 +5,7 @@ class CountryCard extends HTMLElement {
     }
 
     connectedCallback() {
-        let shadowRoot = this.attachShadow({mode: 'open'});
+        const shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.innerHTML = `
             <style>
 
@@ -44,7 +44,7 @@ cursor: pointer;
                 <div class="card">
                     <div class="card-image">
                         <img src="${this.data.flag}"
-                             alt="">
+                             alt="${this.data.nativeName}">
                     </div>
                     <div class="card-body">
                         <h5 class="card__title cursor-pointer" id="card__title">
