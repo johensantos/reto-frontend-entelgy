@@ -1,16 +1,8 @@
 const D = document;
-/*
-const card__titleElement = D.getElementById('card__title');
 const simpleModalElement = D.getElementById('simple-modal');
 const closeModalElement = D.getElementById('close-modal');
 
 
-card__titleElement.addEventListener('click', () => {
-    simpleModalElement.classList.add('show');
-})
-closeModalElement.addEventListener('click', () => {
-    simpleModalElement.classList.remove('show');
-})*/
 const countryCardContainerElement = D.getElementById('country-card-container');
 
 function getCountries() {
@@ -22,18 +14,36 @@ function getCountries() {
     }).then(value => value.slice(0, 12))
 }
 
-getCountries().then(value => {
-    value.forEach(country => {
-        console.log(country);
-        let newObject = new CountryCard();
-        newObject.data = country;
+function renderWebComponents() {
+    getCountries().then(value => {
+        value.forEach(country => {
+            let newComponent = new CountryCard();
+            newComponent.data = country;
+            let webComponentParentDiv = document.createElement('div');
+            webComponentParentDiv.classList.add('column')
+            webComponentParentDiv.append(newComponent)
+            newComponent.addEventListener('getCountry$', evt => {
+                openSimpleModal(newComponent.data)
+            })
+            countryCardContainerElement.append(webComponentParentDiv);
 
-        let newDiv = document.createElement('div');
-        newDiv.classList.add('column')
-        newDiv.append(newObject)
-
-        countryCardContainerElement.append(newDiv);
-
+        })
     })
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderWebComponents();
 })
-;
+
+function openSimpleModal(countryData) {
+    console.log(countryData);
+    simpleModalElement.classList.add('show');
+}
+
+function closeSimpleModal() {
+    simpleModalElement.classList.remove('show');
+}
+
+closeModalElement.addEventListener('click', () => {
+    closeSimpleModal();
+})

@@ -1,15 +1,12 @@
 class CountryCard extends HTMLElement {
     constructor() {
-
         super();
         this._data = {};
     }
-
-
     connectedCallback() {
         let shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.innerHTML = `
-<style>
+            <style>
 
 .card {
     position: relative;
@@ -39,7 +36,6 @@ class CountryCard extends HTMLElement {
     margin-bottom: 8px;
 }
 </style>
-  
                 <div class="card">
                     <div class="card-image">
                         <img src="${this.data.flag}"
@@ -54,16 +50,20 @@ class CountryCard extends HTMLElement {
                 </div>
       
     `;
+        const title = shadowRoot.querySelector('#card__title')
+
+        title.addEventListener('click', () => {
+            this.dispatchEvent(new CustomEvent('getCountry$', null))
+        })
     }
 
     get data() {
         return this._data;
     }
 
-    set data(newVal) {
-        this._data = newVal;
+    set data(country) {
+        this._data = country;
     }
-
 
 }
 
