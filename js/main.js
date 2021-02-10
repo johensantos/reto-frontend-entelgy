@@ -35,15 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
     renderWebComponents();
 })
 
-function openSimpleModal(countryData) {
-    console.log(countryData);
+function openSimpleModal({region, capital, population, latlng, name}) {
+    console.log(latlng);
     simpleModalElement.classList.add('show');
+
+    simpleModalElement.querySelector('#modal-title').innerText = name
+    simpleModalElement.querySelector('#population').innerText = population
+    simpleModalElement.querySelector('#capital').innerText = capital
+    simpleModalElement.querySelector('#region').innerText = region
+    simpleModalElement.querySelector('#mapsLink').href = `https://www.google.com/maps/@${latlng[0]},${latlng[1]},6z`
+    document.body.style.overflow = 'hidden';
 }
 
 function closeSimpleModal() {
     simpleModalElement.classList.remove('show');
+    document.body.style.overflow = 'auto';
 }
 
 closeModalElement.addEventListener('click', () => {
     closeSimpleModal();
 })
+

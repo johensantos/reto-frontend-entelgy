@@ -19,20 +19,40 @@
         <div class="row row-columns-4" id="country-card-container">
 
 
-
         </div>
     </div>
 </section>
-<footer class="footer" >
+<footer class="footer">
+    <div class="text-center">
+        <p>&copy; Mauro Guevara Santos 2021</p>
+    </div>
+    <div class="text-center">
+        <p>Desarrollado usando Web Components</p>
+    </div>
 </footer>
 <div class="simple-modal" id="simple-modal">
     <div class="modal-content">
-        <h1>Lorem ipsum dolor sit amet, cons</h1>
-        <br><br><br>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, atque beatae consequatur cupiditate dignissimos
-            illo, inventore </p>
-        <button id="close-modal">
-            close
+        <h1 id="modal-title">Lorem ipsum dolor sit amet, cons</h1>
+        <br><br>
+        <div class="text-center">
+            <strong>Población: <span id="population"></span>+</strong>
+        </div>
+        <br>
+        <div>
+            <strong>Capital: <span id="capital"></span></strong>
+        </div>
+        <br>
+        <div>
+            <strong>Continente: <span id="region"></span></strong>
+        </div>
+        <br>
+        <div>
+            <a target="_blank" class="link" id="mapsLink" href="#">Ver en Google Maps</a>
+        </div>
+        <br><br>
+
+        <button id="close-modal" class="btn modal-close-btn">
+            Cerrar
         </button>
     </div>
 

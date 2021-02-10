@@ -53,7 +53,7 @@ img {
 
 .main-content {
     max-width: 960px;
-    margin-bottom: 40px;
+    margin-bottom: 30x;
     min-height: 900px;
     width: 100%;
     padding-right: 15px;
@@ -122,4 +122,47 @@ img {
     padding: 30px 50px;
     text-align: center;
 
+}
+/*
+*Others
+*/
+.link {
+    text-decoration: none;
+    color: var(--main-primary-color);
+}
+
+.btn {
+    border: none;
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 16px;
+    text-transform: uppercase;
+    vertical-align: middle;
+    outline: 0;
+    cursor: pointer;
+}
+
+.modal-close-btn {
+    background-color: var(--main-primary-color);
+    color: white;
+}
+
+.cursor-pointer {
+    cursor: pointer;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/*Footer*/
+.footer {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }

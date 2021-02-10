@@ -3,6 +3,7 @@ class CountryCard extends HTMLElement {
         super();
         this._data = {};
     }
+
     connectedCallback() {
         let shadowRoot = this.attachShadow({mode: 'open'});
         shadowRoot.innerHTML = `
@@ -35,6 +36,10 @@ class CountryCard extends HTMLElement {
     font-weight: 300;
     margin-bottom: 8px;
 }
+.cursor-pointer{
+cursor: pointer;
+
+}
 </style>
                 <div class="card">
                     <div class="card-image">
@@ -42,7 +47,7 @@ class CountryCard extends HTMLElement {
                              alt="">
                     </div>
                     <div class="card-body">
-                        <h5 class="card__title" id="card__title">
+                        <h5 class="card__title cursor-pointer" id="card__title">
                             ${this.data.nativeName}
                         </h5>
                       
