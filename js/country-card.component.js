@@ -43,7 +43,7 @@ cursor: pointer;
 </style>
                 <div class="card">
                     <div class="card-image">
-                        <img src="${this.data.flag}"
+                        <img src="${this.data.flags.png}"
                              alt="${this.data.nativeName}">
                     </div>
                     <div class="card-body">
