@@ -18,7 +18,7 @@ function getCountries() {
             return value.json()
         }
         throw new Error('Error, al llamar a la API')
-    }).then(value => value.slice(0, 12))
+    }).then(value => value)
 }
 
 function renderWebComponents() {
