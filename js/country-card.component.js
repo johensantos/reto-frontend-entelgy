@@ -48,7 +48,7 @@ cursor: pointer;
                     </div>
                     <div class="card-body">
                         <h5 class="card__title cursor-pointer" id="card__title">
-                            ${this.data.name.official}
+                            ${this.data.name.common}
                         </h5>
                       
                     </div>
