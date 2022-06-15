@@ -43,7 +43,7 @@ function openSimpleModal({region, capital, population, latlng, name}) {
     simpleModalElement.classList.add('show');
     simpleModalElement.querySelector('#modal-title').innerText = name.official
     simpleModalElement.querySelector('#population').innerText = population
-    simpleModalElement.querySelector('#capital').innerText = capital
+    simpleModalElement.querySelector('#capital').innerText = capital[0] || 'Without Capital'
     simpleModalElement.querySelector('#region').innerText = region
     simpleModalElement.querySelector('#mapsLink').href = `https://www.google.com/maps/@${latlng[0]},${latlng[1]},6z`
     document.body.style.overflow = 'hidden';
