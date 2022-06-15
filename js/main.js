@@ -13,7 +13,7 @@ const countryCardContainerElement = D.getElementById('country-card-container');
 * FUNCTIONS
 * */
 function getCountries() {
-    return fetch('https://restcountries.eu/rest/v2/lang/es').then(value => {
+    return fetch('https://restcountries.com/v3.1/all').then(value => {
         if (value.ok) {
             return value.json()
         }
