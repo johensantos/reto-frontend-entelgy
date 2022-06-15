@@ -41,7 +41,7 @@ function renderWebComponents() {
 function openSimpleModal({region, capital, population, latlng, name}) {
 
     simpleModalElement.classList.add('show');
-    simpleModalElement.querySelector('#modal-title').innerText = name
+    simpleModalElement.querySelector('#modal-title').innerText = name.official
     simpleModalElement.querySelector('#population').innerText = population
     simpleModalElement.querySelector('#capital').innerText = capital
     simpleModalElement.querySelector('#region').innerText = region
