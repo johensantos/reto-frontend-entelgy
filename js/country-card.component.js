@@ -44,11 +44,11 @@ cursor: pointer;
                 <div class="card">
                     <div class="card-image">
                         <img src="${this.data.flags.png}"
-                             alt="${this.data.nativeName}">
+                             alt="${this.data.name.common}">
                     </div>
                     <div class="card-body">
                         <h5 class="card__title cursor-pointer" id="card__title">
-                            ${this.data.name.common}
+                            ${this.data.name.official}
                         </h5>
                       
                     </div>
